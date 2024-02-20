@@ -41,6 +41,11 @@
     color:hsl(43,100%,68%);
 }
 
+.animate_edu{
+    font-size: 1.2rem;
+    color: #008000; 
+    animation: animate 2s linear infinite; 
+}
 
 .shapes{
     position: absolute;
@@ -108,6 +113,25 @@
     bottom: 10%;
     right: 2%;
 }
+
+@keyframes animate { 
+    0% { 
+        opacity: 0; 
+    } 
+    
+    25%{
+       opacity: 0.5;
+    }
+
+    50% { 
+        opacity: 1; 
+    } 
+    75%{
+        opacity: 0.5; 
+    }
+    100% { 
+        opacity: 0; 
+    } }
 
 @media screen and(max-width:1024px) {
     

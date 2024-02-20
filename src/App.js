@@ -16,9 +16,10 @@ function App() {
       <main className="main">
         <Home />
         <About />
+        <Portfolio />
         <Services />
         <Resume />
-        <Portfolio />
+       
         <Contact />
       </main>
     </React.Fragment>

@@ -1,37 +1,26 @@
 import React from 'react';
 import "./resume.css";
-import Data from './Data';
 import Card from './Card';
+import Data from './Data';
+
 
 const Resume = () => {
+   
   return (
-    <section className="resume container section" id="resume">
-      <h2 className="section_title">Experience</h2>
+    
+    <section class="resume container" id="resume">
+      <h2 class="section_title">Education</h2>
+    <div className='resume_container'>
 
-      <div className="resume_container grid">
-        <div className="timeline grid">
-          {Data.map((val,id)=>{
-            if(val.category==="education"){
+    {Data.map((val,id)=>{
               return(
                 <Card key={id} icon={val.icon} title={val.title} year={val.year} school={val.school} desc={val.desc}/>
               )
-            }
           })}
-        </div>
-
-        <div className="timeline grid">
-          {Data.map((val,id)=>{
-            if(val.category==="experience"){
-              return(
-                <Card key={id} icon={val.icon} title={val.title} year={val.year} school={val.school} desc={val.desc}/>
-              )
-            }
-          })}
-        </div>
-
-      </div>
-    </section>
+  
+  </div>
+  </section>
   )
 }
-
+  
 export default Resume;
