@@ -16,7 +16,7 @@ const Data = [
       year: "2020 - 2023",
       title: "Under Graduate",
       school:"L.C.B College, Maligaon",
-      desc: "B.Sc Computer Science(H)- 8.18 CGPA",
+      desc: "B.Sc Computer Science(H)",
       
     },
     {
@@ -25,7 +25,7 @@ const Data = [
       year: "2017 - 2019",
       title: "12th",
       school:"Cotton University, Guwahati",
-      desc: "Science- 58%",
+      desc: "Science",
      
     },
     {
@@ -34,7 +34,7 @@ const Data = [
       year: "2005 - 2017",
       title: "10th",
       school:"Sacred Heart High School, Rowta",
-      desc: "92.16%",
+      desc: "",
       
      
     },
