@@ -1,7 +1,10 @@
 .about_container{
     grid-template-columns: 3fr 9fr;
     column-gap: 1.875rem;
+
 }
+
+
 
 .about_data{
     padding: 1.875rem;
@@ -100,6 +103,9 @@
     font-size: 1.875rem;
 
 }
+
+
+
 
 @media screen and (max-width:1024px){
     .about_container{

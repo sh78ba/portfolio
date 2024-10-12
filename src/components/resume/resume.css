@@ -10,12 +10,16 @@
     border: 1px solid;
     border-radius: 1rem;
     background: #00d9ff;
-    transition: 0.7s;
+    transition: 0.8s ease-in;
+    animation: color 9s infinite linear;
+  
   }
   
   .timeline:hover {
     cursor: pointer;
-    background: #00fffa;
+    /* background: #00fffa; */
+    font-size: 1.1rem;
+
   
   }
 
@@ -24,6 +28,15 @@
   } 
 
 
+@keyframes color {
+  0%   { background: #33CCCC; }
+  20%  { background: #33ff5e; }
+  40%  { background: #e1f945; }
+  60%  { background: #FCCA00; }
+  80%  { background: #7bff7e; }
+  100% { background: #33CCCC; }
+  
+}
 
 @media screen and (max-width:1024px) {
     
