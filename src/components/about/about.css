@@ -104,6 +104,11 @@
 
 }
 
+.about_img{
+    border-radius: 10%;
+    align-self: center;
+}
+
 
 
 
@@ -124,7 +129,10 @@
 
     .about_img{
         justify-self: center;
+       
+       
     }
+
 
     .about_box{
         flex-direction: column;

@@ -8,8 +8,8 @@ const Resume = () => {
    
   return (
     
-    <section class="resume container" id="resume">
-      <h2 class="section_title">Education</h2>
+    <section className="resume container" id="resume">
+      <h2 className="section_title">Education</h2>
     <div className='resume_container'>
 
     {Data.map((val,id)=>{

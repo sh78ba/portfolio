@@ -24,7 +24,7 @@ const data = [
     image: Image3,
     title: "Framework & Database",
     description:
-      "ReactJs, ExpressJs, MongoDb, MySQL, Bootstrap",
+      "ReactJs, ExpressJs, MongoDb, MySQL, Bootstrap, Tailwind Css",
   },
 ];
 

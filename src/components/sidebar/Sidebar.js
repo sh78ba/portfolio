@@ -4,8 +4,12 @@ import "./sidebar.css";
 const Sidebar = () => {
 
   const[toggle,showMenu]=useState(false);
+  const date=new Date()
+  const year=date.getFullYear()
+
 
   return (
+
     <>
     <aside className={toggle ? "aside show-menu" : "aside" }>
 
@@ -57,7 +61,7 @@ const Sidebar = () => {
       
 
       <div className="nav_footer">
-        <span className="copyright">&copy;2024.</span>
+        <span className="copyright">&copy;{year}</span>
       </div>
 
     </aside>
