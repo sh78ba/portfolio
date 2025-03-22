@@ -10,7 +10,7 @@ const data = [
     image: Image1,
     title: "Programming Language",
     description:
-      "Experienced in both functional and OOP: C++, Java, JavaScript.",
+      "Experienced in both functional and OOP: C++, JavaScript, Java, Python.",
   },
   {
     id: 2,
