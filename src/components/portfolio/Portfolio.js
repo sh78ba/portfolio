@@ -19,6 +19,7 @@ const Portfolio = () => {
         <span className="work_item" onClick={() => setItem(Menu)}>Everything</span>
         <span className="work_item" onClick={() => filterItem("Web App")}>Web App</span>
         <span className="work_item" onClick={() => filterItem("Android/IOS App")}>Android/IOS App</span>
+        <span className="work_item" onClick={() => filterItem("AI ML")}>AI ML</span>
       </div>
        
        <div className="work_container grid">

@@ -4,6 +4,8 @@ import Work3 from '../../assets/work-3.png'
 import Work4 from '../../assets/work-4.png'
 import Work5 from '../../assets/work-5.png'
 import Work6 from '../../assets/work-6.png'
+import Work7 from '../../assets/work-7.png'
+import Work8 from '../../assets/work-8.png'
 
 const Menu = [
     {
@@ -46,7 +48,21 @@ const Menu = [
       title: "Perfin",
       category: "Web App",
       link:"https://github.com/sh78ba/personal_finance"
-    }
+    },
+    {
+      id:7,
+      image: Work7,
+      title: "Summarizer",
+      category: "AI ML",
+      link:"https://summarizer-app-7bxbyjiv6u5mvkrhhwmzzv.streamlit.app/"
+    },
+    {
+      id:8,
+      image: Work8,
+      title: "SMS_Spam_Detector",
+      category: "AI ML",
+      link:"https://sms-spam-detector-2ozk.onrender.com/"
+    },
     
     
     
