@@ -6,6 +6,9 @@ import Work5 from '../../assets/work-5.png'
 import Work6 from '../../assets/work-6.png'
 import Work7 from '../../assets/work-7.png'
 import Work8 from '../../assets/work-8.png'
+import Work9 from '../../assets/work-9.png'
+import Work10 from '../../assets/work-10.png'
+import Work11 from '../../assets/work-11.png'
 
 const Menu = [
     {
@@ -62,6 +65,27 @@ const Menu = [
       title: "SMS_Spam_Detector",
       category: "AI ML",
       link:"https://sms-spam-detector-2ozk.onrender.com/"
+    },
+    {
+      id:9,
+      image: Work9,
+      title: "DevShort",
+      category: "Web App",
+      link:"https://github.com/sh78ba/DevShort"
+    },
+    {
+      id:10,
+      image: Work10,
+      title: "Smart-Portfolio",
+      category: "AI ML",
+      link:"https://smart-portfolio-frontend.vercel.app/"
+    },
+    {
+      id:11,
+      image: Work11,
+      title: "MeProfiled",
+      category: "AI ML",
+      link:"https://me-profiled-frontend.vercel.app/"
     },
     
     

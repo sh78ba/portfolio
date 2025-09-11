@@ -1,11 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./sidebar.css";
 
 const Sidebar = () => {
 
-  const[toggle,showMenu]=useState(false);
+  const [toggle, showMenu] = useState(false);
+  const [theme, setTheme] = useState('light');
   const date=new Date()
   const year=date.getFullYear()
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    setTheme(initialTheme);
+    document.documentElement.setAttribute('data-theme', initialTheme);
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(nextTheme);
+    document.documentElement.setAttribute('data-theme', nextTheme);
+    localStorage.setItem('theme', nextTheme);
+  };
 
 
   return (
@@ -61,6 +77,9 @@ const Sidebar = () => {
       
 
       <div className="nav_footer">
+        <button className="theme_toggle" onClick={toggleTheme} aria-label="Toggle theme">
+          {theme === 'dark' ? '☀️' : '🌙'}
+        </button>
         <span className="copyright">&copy;{year}</span>
       </div>
 

@@ -54,6 +54,16 @@
     transition: .3s;
 }
 
+.theme_toggle{
+    background-color: var(--container-color);
+    color: var(--title-color);
+    border: 1px solid rgba(255 255 255 / 10%);
+    height: 36px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
 @media screen and (max-width:1024px){
     .aside{
         left: -110px;
