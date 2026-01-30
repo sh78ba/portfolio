@@ -1,38 +1,35 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import "./sidebar.css";
 
 const Sidebar = () => {
-
   const [toggle, showMenu] = useState(false);
-  const [theme, setTheme] = useState('light');
-  const date=new Date()
-  const year=date.getFullYear()
+  const [theme, setTheme] = useState("light");
+  const date = new Date();
+  const year = date.getFullYear();
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
     setTheme(initialTheme);
-    document.documentElement.setAttribute('data-theme', initialTheme);
+    document.documentElement.setAttribute("data-theme", initialTheme);
   }, []);
 
   const toggleTheme = () => {
-    const nextTheme = theme === 'dark' ? 'light' : 'dark';
+    const nextTheme = theme === "dark" ? "light" : "dark";
     setTheme(nextTheme);
-    document.documentElement.setAttribute('data-theme', nextTheme);
-    localStorage.setItem('theme', nextTheme);
+    document.documentElement.setAttribute("data-theme", nextTheme);
+    localStorage.setItem("theme", nextTheme);
   };
 
-
   return (
-
     <>
-    <aside className={toggle ? "aside show-menu" : "aside" }>
-
-      <nav className="nav">
+      <aside className={toggle ? "aside show-menu" : "aside"}>
+        <nav className="nav">
           <div className="nav_menu">
             <ul className="nav_list">
-
               <li className="nav_item">
                 <a href="#home" className="nav_link">
                   <i className="icon-home"></i>
@@ -41,54 +38,62 @@ const Sidebar = () => {
 
               <li className="nav_item">
                 <a href="#about" className="nav_link">
-                <i className="icon-user-following"></i>
+                  <i className="icon-user-following"></i>
+                </a>
+              </li>
+
+              <li className="nav_item">
+                <a href="#experience" className="nav_link">
+                  <i className="icon-badge"></i>
                 </a>
               </li>
 
               <li className="nav_item">
                 <a href="#work" className="nav_link">
-                <i className="icon-layers"></i>
+                  <i className="icon-layers"></i>
                 </a>
               </li>
 
               <li className="nav_item">
                 <a href="#services" className="nav_link">
-                <i className="icon-briefcase"></i>
+                  <i className="icon-briefcase"></i>
                 </a>
               </li>
 
               <li className="nav_item">
                 <a href="#resume" className="nav_link">
-                <i className="icon-graduation"></i>
+                  <i className="icon-graduation"></i>
                 </a>
               </li>
-
-              
 
               <li className="nav_item">
                 <a href="#contact" className="nav_link">
-                <i className="icon-bubble"></i>
+                  <i className="icon-bubble"></i>
                 </a>
               </li>
-
             </ul>
           </div>
-      </nav>
-      
+        </nav>
 
-      <div className="nav_footer">
-        <button className="theme_toggle" onClick={toggleTheme} aria-label="Toggle theme">
-          {theme === 'dark' ? '☀️' : '🌙'}
-        </button>
-        <span className="copyright">&copy;{year}</span>
+        <div className="nav_footer">
+          <button
+            className="theme_toggle"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? "☀️" : "🌙"}
+          </button>
+          <span className="copyright">&copy;{year}</span>
+        </div>
+      </aside>
+      <div
+        className={toggle ? "nav_toggle nav_toggle-open" : "nav_toggle"}
+        onClick={() => showMenu(!toggle)}
+      >
+        <i className="icon-menu"></i>
       </div>
-
-    </aside>
-    <div className={toggle? "nav_toggle nav_toggle-open" :"nav_toggle" } onClick={()=>showMenu(!toggle)}>
-      <i className="icon-menu"></i>
-    </div>
     </>
-  )
-}
+  );
+};
 
 export default Sidebar;
