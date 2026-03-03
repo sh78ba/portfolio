@@ -71,6 +71,17 @@ const Sidebar = () => {
                   <i className="icon-bubble"></i>
                 </a>
               </li>
+
+              <li className="nav_item">
+                <a
+                  href="https://blog.sbdev.me/"
+                  className="nav_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="icon-notebook"></i>
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
